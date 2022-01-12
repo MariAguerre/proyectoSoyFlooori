@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* GRID */
+#container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 3fr 0.3fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header main"
+        "header footer";
+}
+
+#header {
+    grid-area: header;
+    background-color: #f9de1f;
+
+}
+
+
+
+#footer {
+    grid-area: footer;
+    height: 100px;
+    text-align: right;
+    font-size: 14px;
+    background-color: #a9d8e5;
+}
+
+#txtFooter{
+    margin: 15px;
+}
+
+/* Fin GRID */
+
+
+
+#mainIndex,
+#mainCasaTaller,
+#mainContacto {
+    grid-area: main;
+    
+    background-image: url(../Img/img__bg--pink.png);
+    background-size: cover;
+}
+
+#mainIlustraciones,
+#mainSobreMi,
+#mainTienda {
+    grid-area: main;
+    
+    background-image: url(../Img/img__bg--sky.png);
+    background-size: cover;
+}
+
+
+
+/* Header */
+.img__Logo {
+    width: 100px;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.img__SoyFlooori {
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+
+.menuVertical {
+    margin-top: 3rem;
+}
+
+.menuVertical a {
+    color: black;
+    display: block;
+    text-align: center;
+    padding: 15px 0px 15px 0px;
+    text-decoration: none;
+}
+
+.menuVertical a:hover {
+    background-color: #e6a2bb;
+    cursor: pointer;
+}
+
+#socialMedia {
+    height: 3rem;
+    bottom: 2rem;
+    text-align: center;
+}
+
+.fab {
+    color: #a9d8e5;
+    margin: auto;
+}
+
+.titulos {
+    font-family: 'Fuzzy Bubbles', cursive;
+    padding: 2rem 0 0 2rem;
+}
+
+.subtitulo {
+    font-size: 18px;
+    padding: 2rem 0 0 2rem;
+}
+
+/* Fin header */
+
+
+/* Index */
+
+
+
+.contMenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3px 3px;
+    grid-auto-flow: row;
+    justify-content: stretch;
+    justify-items: stretch;
+    grid-template-areas:
+        "imgContacto imgIlustraciones imgCasaTaller"
+        "imgTienda imgSobreMi imgSobreMi";
+    grid-area: contMenu;
+    padding-left: 30px;
+}
+
+.imgContacto {
+    width: 80%;
+    grid-area: imgContacto;
+}
+
+.imgIlustraciones {
+    width: 80%;
+    grid-area: imgIlustraciones;
+}
+
+.imgCasaTaller {
+    width: 80%;
+    grid-area: imgCasaTaller;
+}
+
+.imgTienda {
+    width: 80%;
+    grid-area: imgTienda;
+}
+
+.imgSobreMi {
+    width: 80%;
+    grid-area: imgSobreMi;
+}
+
+/* Fin INDEX */
+
+/* SOBRE MI */
+#contenidoSobreMi {
+    background-color: #e6a2bb;
+    width: 80%;
+    margin: auto;
+    margin-top: 60px;
+    border-radius: 1rem;
+    padding: 20px;
+    text-align: center;
+}
+
+#contenidoSobreMi p {
+    margin: 1rem;
+}
+
+/* Fin Sobre Mi */
+
+/* Casa Taller */
+
+#table {
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    margin-top: 60px;
+    text-align: center;
+    background-color: #86bece;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: solid 5px #e6a2bf;
+    padding: 3px;
+}
+
+th {
+    background-color: #f9de1f;
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+
+tr:hover {
+    background-color: #e6a2bf;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* Fin Casa Taller */
+
+/* Contacto */
+
+form {
+    text-align: center;
+}
+
+.formularioContacto {
+    width: 50%;
+    margin: 3rem auto;
+    padding: 1.5rem 1rem;
+    background-color: #e6a2bb;
+    border-radius: 0.5rem;
+}
+
+.formContacto {
+    display: inline-block;
+    width: 60%;
+    text-align: left;
+    color: #000000;
+    font-weight: 600;
+}
+
+.formInput,
+.formTextArea {
+    width: 60%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: #86bece;
+    border: none;
+    color: #000000;
+    font-size: 1rem;
+}
+
+.formTextArea {
+    height: 5rem;
+    resize: none;
+}
+
+.formInput:focus,
+.formTextArea:focus {
+    outline: none;
+}
+
+.formInputSubmit {
+    background-color: #86bece;
+    margin-top: 1.5rem;
+    border-radius: 0.3rem;
+    border-bottom: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.formInputSubmit:hover {
+    background-color: #f9de1f;
+}
+
+/* Tienda Online */
+
+#contTienda {
+    padding: 30px 0px 0px 30px;
+}
+
+/* Responsive */
+
+@media(max-width: 768px) {
+    #container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+    #header {
+        width: 100vw;
+    } 
+    .fab {
+        visibility: hidden;
+    }
+    .contMenu {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1px 1px;
+        grid-auto-flow: row;
+        justify-content: stretch;
+        justify-items: stretch;
+        grid-template-areas:
+            "imgContacto"
+            "imgIlustraciones"
+            "imgCasaTaller"
+            "imgTienda"
+            "imgSobreMi";
+    }
+#mainIndex,
+#mainCasaTaller,
+#mainContacto, #mainIlustraciones,
+#mainSobreMi,
+#mainTienda  {
+    height: auto;
+}
+
+}
+
