@@ -18,7 +18,7 @@
 
 #header {
     grid-area: header;
-    background-color: #f9de1f;
+    background-image: linear-gradient(to top, #f9de1f, #e6a2bb);
 
 }
 
@@ -57,9 +57,6 @@
     background-image: url(../Img/img__bg--sky.png);
     background-size: cover;
 }
-
-
-
 /* Header */
 .img__Logo {
     width: 100px;
@@ -72,6 +69,17 @@
     width: 150px;
     display: block;
     margin: auto;
+}
+
+.img__SoyFlooori:hover{
+    animation-name: agrandado;
+    animation-duration: 2s;
+}
+
+@keyframes agrandado{
+    0%{
+        width: 200px;
+    }
 }
 
 .menuVertical {
