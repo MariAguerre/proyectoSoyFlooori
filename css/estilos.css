@@ -7,6 +7,7 @@
 
 /* GRID */
 #container {
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 3fr 0.3fr;
@@ -18,8 +19,7 @@
 
 #header {
     grid-area: header;
-    background-image: linear-gradient(to top, #f9de1f, #e6a2bb);
-
+    background-color: #f9de1f;
 }
 
 
@@ -32,7 +32,7 @@
     background-color: #a9d8e5;
 }
 
-#txtFooter{
+#txtFooter {
     margin: 15px;
 }
 
@@ -44,7 +44,7 @@
 #mainCasaTaller,
 #mainContacto {
     grid-area: main;
-    
+
     background-image: url(../Img/img__bg--pink.png);
     background-size: cover;
 }
@@ -53,10 +53,11 @@
 #mainSobreMi,
 #mainTienda {
     grid-area: main;
-    
+
     background-image: url(../Img/img__bg--sky.png);
     background-size: cover;
 }
+
 /* Header */
 .img__Logo {
     width: 100px;
@@ -71,13 +72,13 @@
     margin: auto;
 }
 
-.img__SoyFlooori:hover{
+.img__SoyFlooori:hover {
     animation-name: agrandado;
     animation-duration: 2s;
 }
 
-@keyframes agrandado{
-    0%{
+@keyframes agrandado {
+    0% {
         width: 200px;
     }
 }
@@ -124,48 +125,96 @@
 
 
 /* Index */
+.contMenu {
+    padding: 100px 50px 0px 100px;
+}
 
+.imgMenu {
+    display: flex;
+    padding: 30px;
+    width: 150px;
+    height: 150px;
+    text-decoration: none;
+}
 
+.txtIndex {
+    color: black;
+}
 
 .contMenu {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 3px 3px;
-    grid-auto-flow: row;
-    justify-content: stretch;
-    justify-items: stretch;
+    gap: 0px 0px;
     grid-template-areas:
-        "imgContacto imgIlustraciones imgCasaTaller"
-        "imgTienda imgSobreMi imgSobreMi";
-    grid-area: contMenu;
-    padding-left: 30px;
-}
-
-.imgContacto {
-    width: 80%;
-    grid-area: imgContacto;
-}
-
-.imgIlustraciones {
-    width: 80%;
-    grid-area: imgIlustraciones;
-}
-
-.imgCasaTaller {
-    width: 80%;
-    grid-area: imgCasaTaller;
-}
-
-.imgTienda {
-    width: 80%;
-    grid-area: imgTienda;
+        "sobreMi sobreMi sobreMi ilustraciones ilustraciones ilustraciones"
+        "contacto contacto tienda tienda casaTaller casaTaller";
 }
 
 .imgSobreMi {
-    width: 80%;
-    grid-area: imgSobreMi;
+    background-image: url(../Img/sobreMi.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: sobreMi;
 }
+
+.imgSobreMi:hover {
+    background-image: url(../Img/imgsobreMiHover.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.imgIlustraciones {
+    background-image: url(../Img/ilustraciones.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: ilustraciones;
+}
+
+.imgIlustraciones:hover {
+    background-image: url(../Img/ilustracionesHover.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.imgTienda {
+    background-image: url(../Img/store.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: tienda;
+}
+
+.imgTienda:hover {
+    background-image: url(../Img/storeHover.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.imgContacto {
+    background-image: url(../Img/img__casaTaller.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: contacto;
+}
+
+.imgCasaTaller {
+    background-image: url(../Img/Img__Contacto.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: casaTaller;
+}
+
+
+
+
 
 /* Fin INDEX */
 
@@ -285,40 +334,95 @@ form {
 
 @media(max-width: 768px) {
     #container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr 1fr;
         grid-template-areas:
             "header"
             "main"
             "footer";
     }
-    #header {
-        width: 100vw;
-    } 
+
+
     .fab {
         visibility: hidden;
     }
+
     .contMenu {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 1px 1px;
-        grid-auto-flow: row;
-        justify-content: stretch;
-        justify-items: stretch;
-        grid-template-areas:
-            "imgContacto"
-            "imgIlustraciones"
-            "imgCasaTaller"
-            "imgTienda"
-            "imgSobreMi";
+        justify-content: center;
+
     }
-#mainIndex,
-#mainCasaTaller,
-#mainContacto, #mainIlustraciones,
-#mainSobreMi,
-#mainTienda  {
-    height: auto;
-}
+
+    .imgMenu {
+        width: 150px;
+        height: 150px;
+        text-decoration: none;
+    }
+
+    .txtIndex {
+        font-size: 12px;
+    }
+
+    #mainIndex,
+    #mainCasaTaller,
+    #mainContacto,
+    #mainIlustraciones,
+    #mainSobreMi,
+    #mainTienda {
+        height: auto;
+    }
+
+    #contenidoSobreMi p {
+        font-size: 12px;
+    }
+
+
+    .respmenu input[type="checkbox"],
+    .respmenu .fa-bars,
+    .respmenu .fa-times {
+        position: absolute;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        right: 0;
+        top: 0;
+        width: 48px;
+        height: 48px;
+    }
+
+    .respmenu .fa-bars,
+    .respmenu .fa-times {
+        font-size: 48px;
+        pointer-events: none;
+    }
+
+    .respmenu input[type="checkbox"] {
+        opacity: 0;
+    }
+
+    .respmenu {
+        width: 150px;
+        color: #e6a2bb;
+        position: relative;
+        background: #f9de1f;
+        min-height: 48px;
+
+    }
+
+    .respmenu nav {
+        display: none;
+    }
+
+    .respmenu input:checked~nav {
+        display: block;
+    }
+
+    .respmenu input:checked~.fa-bars {
+        display: none;
+    }
+
+    .respmenu input:not(:checked)~.fa-times {
+        display: none;
+    }
 
 }
-
